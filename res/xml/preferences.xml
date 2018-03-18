@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android" >
+    <PreferenceCategory
+        android:key="main_category"
+        android:title="MAIN SETTINGS">
+        
+        <EditTextPreference 
+            android:title="Room Name"
+            android:key="room_name"
+            android:summary="Enter name for this room"/>
+        
+        <CheckBoxPreference
+	            android:key="fullscreen"
+	            android:title="Fullscreen"
+	            android:summary="Enable or disable fullscreen"
+	            android:defaultValue="false"
+	    />
+        
+        <CheckBoxPreference
+	            android:key="keep_screen_on"
+	            android:title="Keep screen always ON"
+	            android:summary="Enable to keep screen always ON"
+	            android:defaultValue="false"
+	    />
+        
+		<ListPreference
+			android:key="text_size"
+			android:title="Text Size"
+			android:summary="Define application text size"
+			android:defaultValue="10"
+			android:entries="@array/text_size_entries"
+			android:entryValues="@array/text_size_values"
+		/> 
+		
+		<ListPreference
+			android:key="refresh_time"
+			android:title="Refresh rate"
+			android:summary="Define how ofter meeting list schould be refreshed"
+			android:defaultValue="5000"
+			android:entries="@array/refresh_time_entries"
+			android:entryValues="@array/refresh_time_values"
+		/>	
+	
+		<ListPreference
+			android:key="warning_time"
+			android:title="Warning time"
+			android:summary="Define how soon before next meeting show a orange warning"
+			android:defaultValue="900000"
+			android:entries="@array/warning_time_entries"
+			android:entryValues="@array/warning_time_values"
+		/>
+		
+	</PreferenceCategory>
+    <PreferenceCategory
+        android:key="event_element_category"
+        android:title="SHOW EVENT ELEMENTS"
+        android:summary="Select wchich elements will be shown in event">
+    	
+    	<CheckBoxPreference
+	            android:key="event_element_time"
+	            android:title="Show Time"
+	            android:summary="Show event time"
+	            android:defaultValue="true"
+	    />
+    	<CheckBoxPreference
+	            android:key="event_element_title"
+	            android:title="Show Title"
+	            android:summary="Show event title"
+	            android:defaultValue="true"
+	    />
+    	<CheckBoxPreference
+	            android:key="event_element_organizer"
+	            android:title="Show Organizer"
+	            android:summary="Show event organizer"
+	            android:defaultValue="true"
+	    />
+    </PreferenceCategory>
+
+<!-- 		used for select what event elements to show bud doenst work so it's workarounded  code.google.com/p/android/issues/detail?id=15966-->
+<!-- 		<MultiSelectListPreference -->
+<!-- 	       android:key="event_element" -->
+<!-- 	       android:title="Event elements" -->
+<!-- 	       android:summary="Select wchich elements will be shown in event" -->
+<!-- 	       android:entries="@array/event_element_entries" -->
+<!-- 	       android:entryValues="@array/event_element_values" -->
+<!-- 	       android:defaultValue="@array/event_element_default_values" -->
+<!--         /> -->
+
+    
+
+</PreferenceScreen>
